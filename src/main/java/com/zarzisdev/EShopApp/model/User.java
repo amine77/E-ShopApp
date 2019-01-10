@@ -14,7 +14,7 @@ import org.hibernate.annotations.NaturalId;
 import sun.misc.BASE64Encoder;
 
 /**
- * @author Amine
+ * @author Antonio Goncalves http://www.antoniogoncalves.org --
  */
 
 @Entity

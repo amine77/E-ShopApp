@@ -11,7 +11,7 @@ import javax.xml.bind.annotation.XmlTransient;
 
 
 /**
- * @author Amine
+ * @author Antonio Goncalves http://www.antoniogoncalves.org --
  */
 
 @Entity

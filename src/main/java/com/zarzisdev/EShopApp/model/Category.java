@@ -9,7 +9,7 @@ import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
- * @author Amine
+ * @author Antonio Goncalves http://www.antoniogoncalves.org --
  */
 
 @Entity
