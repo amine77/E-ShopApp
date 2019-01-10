@@ -6,6 +6,10 @@ import java.util.Objects;
 import javax.persistence.*;
 import javax.validation.constraints.Min;
 
+/**
+ * @author Amine
+ */
+
 @Entity
 @Table(name = "order_line")
 public class OrderLine implements Serializable

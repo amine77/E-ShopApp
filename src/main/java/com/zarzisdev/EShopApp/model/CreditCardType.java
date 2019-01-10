@@ -1,9 +1,7 @@
 package com.zarzisdev.EShopApp.model;
 
 /**
- * @author Antonio Goncalves
- *         http://www.antoniogoncalves.org
- *         --
+ * @author Amine
  */
 
 public enum CreditCardType
