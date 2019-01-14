@@ -1,5 +1,4 @@
 package com.zarzisdev.EShopApp.model;
 
-public class CreditCardConverter
-{
+public class CreditCardConverter {
 }

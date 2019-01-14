@@ -48,11 +48,6 @@ public class AuthRestAPIs {
 	@Autowired
 	JwtProvider jwtProvider;
 
-	@GetMapping("/hello")
-	public String sayHello() {
-		return "Greetings from Spring Boot!";
-	}
-
 	@PostMapping("/signin")
 	public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginForm loginRequest) {
 

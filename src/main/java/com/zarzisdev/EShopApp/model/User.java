@@ -10,11 +10,12 @@ import javax.validation.constraints.*;
 import javax.xml.bind.annotation.XmlRootElement;
 
 
+import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.NaturalId;
 import sun.misc.BASE64Encoder;
 
 /**
- * @author Antonio Goncalves http://www.antoniogoncalves.org --
+ * @author amine
  */
 
 @Entity
@@ -41,8 +42,14 @@ public class User implements Serializable {
     // ======================================
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id", updatable = false, nullable = false)
+    @GeneratedValue(
+            strategy = GenerationType.AUTO,
+            generator = "native"
+    )
+    @GenericGenerator(
+            name = "native",
+            strategy = "native"
+    )
     private Long id;
 
 
@@ -103,11 +110,11 @@ public class User implements Serializable {
     // = Constants =
     // ======================================
 
-    public static final String FIND_BY_LOGIN = "User.findByUsername";
+    public static final String FIND_BY_LOGIN          = "User.findByUsername";
     public static final String FIND_BY_LOGIN_PASSWORD = "User.findByUsernameAndPassword";
-    public static final String FIND_ALL = "User.findAll";
-    public static final String FIND_BY_EMAIL = "User.findByEmail";
-    public static final String FIND_BY_UUID = "User.findByUUID";
+    public static final String FIND_ALL               = "User.findAll";
+    public static final String FIND_BY_EMAIL          = "User.findByEmail";
+    public static final String FIND_BY_UUID           = "User.findByUUID";
 
     // ======================================
     // = Constructors =
@@ -272,9 +279,11 @@ public class User implements Serializable {
     public void setHomeAddress(Address homeAddress) {
         this.homeAddress = homeAddress;
     }
+
     public boolean isEnabled() {
         return enabled;
     }
+
     public void setEnabled(boolean enabled) {
         this.enabled = enabled;
     }
